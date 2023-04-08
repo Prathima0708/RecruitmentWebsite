@@ -129,7 +129,7 @@ function Candidate_list() {
                                                 <h3 className="mb-15">Make a Difference with Online Resume!</h3>
                                                 <p className="mb-30">Your Resume in Minutes with Jobs Resume Assistant is Ready!</p>
                                                 <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" 
-                                                href={process.env.PUBLIC_URL + '/'}>appoinments!</a>
+                                                href= '/'>appoinments!</a>
                                             </div>
                                         </div>
                                     </div>
@@ -178,7 +178,7 @@ function Candidate_list() {
                                                     <div className="view-block">
                                                         <a className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
                                                         ttm-btn-color-dark" 
-                                                        href={process.env.PUBLIC_URL + '/candidate_details'}>view Profile</a>
+                                                        href= '/candidate_details'>view Profile</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -206,7 +206,7 @@ function Candidate_list() {
                                                     <div className="view-block">
                                                         <a className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
                                                         ttm-btn-color-dark" 
-                                                        href={process.env.PUBLIC_URL + '/candidate_details'}>view Profile</a>
+                                                        href= '/candidate_details'>view Profile</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -234,7 +234,7 @@ function Candidate_list() {
                                                     <div className="view-block">
                                                         <a className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
                                                         ttm-btn-color-dark" 
-                                                        href={process.env.PUBLIC_URL + '/candidate_details'}>view Profile</a>
+                                                        href= '/candidate_details'>view Profile</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -262,7 +262,7 @@ function Candidate_list() {
                                                     <div className="view-block">
                                                         <a className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
                                                         ttm-btn-color-dark" 
-                                                        href={process.env.PUBLIC_URL + '/candidate_details'}>view Profile</a>
+                                                        href= '/candidate_details'>view Profile</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -291,7 +291,7 @@ function Candidate_list() {
                                                     <div className="view-block">
                                                         <a className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
                                                         ttm-btn-color-dark" 
-                                                        href={process.env.PUBLIC_URL + '/candidate_details'}>view Profile</a>
+                                                        href= '/candidate_details'>view Profile</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -319,7 +319,7 @@ function Candidate_list() {
                                                     <div className="view-block">
                                                         <a className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
                                                         ttm-btn-color-dark" 
-                                                        href={process.env.PUBLIC_URL + '/candidate_details'}>view Profile</a>
+                                                        href= '/candidate_details'>view Profile</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -347,7 +347,7 @@ function Candidate_list() {
                                                     <div className="view-block">
                                                         <a className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
                                                         ttm-btn-color-dark" 
-                                                        href={process.env.PUBLIC_URL + '/candidate_details'}>view Profile</a>
+                                                        href= '/candidate_details'>view Profile</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -375,7 +375,7 @@ function Candidate_list() {
                                                     <div className="view-block">
                                                         <a className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
                                                         ttm-btn-color-dark" 
-                                                        href={process.env.PUBLIC_URL + '/candidate_details'}>view Profile</a>
+                                                        href= '/candidate_details'>view Profile</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -421,7 +421,7 @@ function Candidate_list() {
                                         </div>
                                     </div>{/* featured-icon-box end */}
                                     <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-white" 
-                                    href={process.env.PUBLIC_URL + '/'}>Hiring Now!</a>
+                                    href= '/'>Hiring Now!</a>
                                 </div>
                             </div>
                         </div>

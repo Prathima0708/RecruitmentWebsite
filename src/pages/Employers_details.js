@@ -244,7 +244,7 @@ const Employers_details = () => {
                                     </div>
                                 </div>{/* featured-icon-box end */}
                                 <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-white" 
-                                href={process.env.PUBLIC_URL + '/'}>Hiring Now!</a>
+                                href= '/'>Hiring Now!</a>
                             </div>
                         </div>
                     </div>

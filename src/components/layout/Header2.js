@@ -102,9 +102,9 @@ const Header2 = () => {
                                     <div className="header_btn">
                                         <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill
                                         ttm-icon-btn-left ttm-btn-color-skincolor d-flex align-items-center">
-                                            <i className="far fa-user fa-sm"></i><a className="alert-heading" href={process.env.PUBLIC_URL + '/register'}>sign up </a>
+                                            <i className="far fa-user fa-sm"></i><a className="alert-heading" href='/register'>sign up </a>
                                             <span className="ml-10 mr-10">/</span> 
-                                            <i className="ti ti-lock fa-sm"></i><a className="alert-heading" href={process.env.PUBLIC_URL + '/login'}>login </a>
+                                            <i className="ti ti-lock fa-sm"></i><a className="alert-heading" href='/login'>login </a>
                                         </a>
                                     </div>
                                 </div>{/* site-navigation end */}

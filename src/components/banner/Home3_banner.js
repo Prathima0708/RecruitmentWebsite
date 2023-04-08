@@ -70,7 +70,7 @@ export class Banner extends Component {
                                     </div>
                                     <div className="animated animate__fadeInUp" data-delay="1.4">
                                         <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" 
-                                        href={process.env.PUBLIC_URL + '/contact_01'}>Contact us</a>
+                                        href='/contact_01'>Contact us</a>
                                     </div>
                                 </div>
                             </div>

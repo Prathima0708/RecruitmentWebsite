@@ -110,7 +110,7 @@ function Job_details() {
                                             </div>
                                             <div className="featured-content">
                                                 <div className="featured-title">
-                                                    <h3><a href={process.env.PUBLIC_URL + '/Job_details'}>Vacancy For the Charted Account</a></h3>
+                                                    <h3><a href= '/Job_details'>Vacancy For the Charted Account</a></h3>
                                                 </div>
                                                 <div className="featured-desc">
                                                     <p>Published 2Days Ago.</p>
@@ -230,7 +230,7 @@ function Job_details() {
                                             </div>
                                             <div className="featured-content">
                                                 <div className="featured-title">
-                                                    <h3><a href={process.env.PUBLIC_URL + '/Job_details'}>Vacancy For the Human Resource</a></h3>
+                                                    <h3><a href= '/Job_details'>Vacancy For the Human Resource</a></h3>
                                                 </div>
                                                 <div className="featured-desc">
                                                     <p>Published 2Days Ago.</p>
@@ -256,7 +256,7 @@ function Job_details() {
                                             </div>
                                             <div className="featured-content">
                                                 <div className="featured-title">
-                                                    <h3><a href={process.env.PUBLIC_URL + '/Job_details'}>Vacancy For the Business Analyst</a></h3>
+                                                    <h3><a href= '/Job_details'>Vacancy For the Business Analyst</a></h3>
                                                 </div>
                                                 <div className="featured-desc">
                                                     <p>Published 2Days Ago.</p>
@@ -281,7 +281,7 @@ function Job_details() {
                                             </div>
                                             <div className="featured-content">
                                                 <div className="featured-title">
-                                                    <h3><a href={process.env.PUBLIC_URL + '/Job_details'}><a href={process.env.PUBLIC_URL + '/Job_details'}>Opening For Social Media Manager</a></a></h3>
+                                                    <h3><a href= '/Job_details'><a href= '/Job_details'>Opening For Social Media Manager</a></a></h3>
                                                 </div>
                                                 <div className="featured-desc">
                                                     <p>Published 2Days Ago.</p>
@@ -306,7 +306,7 @@ function Job_details() {
                                             </div>
                                             <div className="featured-content">
                                                 <div className="featured-title">
-                                                    <h3><a href={process.env.PUBLIC_URL + '/Job_details'}><a href={process.env.PUBLIC_URL + '/Job_details'}>Opening For The Content Creator</a></a> </h3>
+                                                    <h3><a href= '/Job_details'><a href= '/Job_details'>Opening For The Content Creator</a></a> </h3>
                                                 </div>
                                                 <div className="featured-desc">
                                                     <p>Published 2Days Ago.</p>
@@ -353,7 +353,7 @@ function Job_details() {
                                         </div>
                                     </div>{/* featured-icon-box end */}
                                     <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-white" 
-                                    href={process.env.PUBLIC_URL + '/'}>Hiring Now!</a>
+                                    href= '/'>Hiring Now!</a>
                                 </div>
                             </div>
                         </div>

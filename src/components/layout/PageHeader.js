@@ -13,7 +13,7 @@ const PageHeader = ({title,content,breadcrumb,className}) => {
                                     <h2>{title}</h2>
                                     <div>{content}</div>
                                     <div className="breadcrumb-wrapper">
-                                        <span><a href={process.env.PUBLIC_URL + '/'} title="Homepage"><i className="ti ti-home" />&nbsp;&nbsp;Home</a></span>
+                                        <span><a href= '/' title="Homepage"><i className="ti ti-home" />&nbsp;&nbsp;Home</a></span>
                                         <span className="bread-sep">&nbsp;/&nbsp;</span>                                        
                                         {breadcrumb}
                                     </div>

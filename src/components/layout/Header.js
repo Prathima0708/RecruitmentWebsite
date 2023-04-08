@@ -72,10 +72,10 @@ const Header = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="header_btn">
+                                    {/* <div className="header_btn">
                                         <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" 
-                                        href={process.env.PUBLIC_URL + '/contact_01'}>Get A Quotes!</a>
-                                    </div>
+                                        href= '/contact_01'>Get A Quotes!</a>
+                                    </div> */}
                                 </div>{/* site-navigation end */}
                             </div>
                         </div>

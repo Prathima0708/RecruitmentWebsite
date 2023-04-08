@@ -68,7 +68,7 @@ function Login() {
                                                                     <label>
                                                                         <div className="forgot-pwd text-center mt-5">
                                                                             <p><a href="#" className="text-theme-SkinColor">Forgot Password?</a></p>
-                                                                            <p>Don't have account? <a href={process.env.PUBLIC_URL + '/register'} className="text-theme-SkinColor">Sign Up here</a></p>
+                                                                            <p>Don't have account? <a href= '/register' className="text-theme-SkinColor">Sign Up here</a></p>
                                                                         </div>
                                                                     </label>
                                                                 </div>
