@@ -91,7 +91,7 @@ function Register(){
                                                                                 </div>
                                                                             </div>
                                                                             <div className="mt-15">
-                                                                                <p>Already registered?<a href={process.env.PUBLIC_URL + '/login'} className="text-theme-SkinColor"> Sign in here</a></p>
+                                                                                <p>Already registered?<a href= '/login' className="text-theme-SkinColor"> Sign in here</a></p>
                                                                             </div>
                                                                         </div>
                                                                     </label>

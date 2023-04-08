@@ -109,9 +109,9 @@ const Header3 = () => {
                                     <div className="header_btn">
                                         <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border
                                         ttm-icon-btn-left ttm-btn-color-grey text-theme-DarkColor d-flex align-items-center">
-                                            <i className="far fa-user fa-sm text-theme-DarkColor"></i><a href={process.env.PUBLIC_URL + '/register'}>sign up </a>
+                                            <i className="far fa-user fa-sm text-theme-DarkColor"></i><a href='/register'>sign up </a>
                                             <span className="ml-10 mr-10 alert-heading">/</span> 
-                                            <i className="ti ti-lock fa-sm text-theme-DarkColor"></i><a href={process.env.PUBLIC_URL + '/login'}>login </a>
+                                            <i className="ti ti-lock fa-sm text-theme-DarkColor"></i><a href='/login'>login </a>
                                         </a>
                                     </div>
                                 </div>{/* site-navigation end */}
