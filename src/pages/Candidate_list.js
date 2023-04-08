@@ -2,24 +2,21 @@ import React, { Component } from 'react';
 import Header from '../components/layout/Header';
 import PageHeader from "../components/layout/PageHeader";
 import { Footer } from '../components/layout/Footer';
+import { useState } from 'react';
 
 
-export class Candidate_list extends Component {
+function Candidate_list() {
 
-    constructor() {
-        super();
-        this.state = {
-          name: "React"
-        };
-        this.onChangeValue = this.onChangeValue.bind(this);
+    const [name, setName] = useState('React');
 
-    }
-    
-    onChangeValue(event) {
+    const onChangeValue = (event) => {
         console.log(event.target.value);
-    }
+    };
 
-    render() {
+    function formSubmit(){
+        
+    }
+  
         return (
 
             <div className="site-main">
@@ -42,7 +39,7 @@ export class Candidate_list extends Component {
                                     <aside className="widget job-widget">
                                         <h3 className="widget-title"><i className="flaticon flaticon-calendar-1"></i>Date Posted</h3>
                                         <form id="list1" className="list-filter">
-                                            <div onChange={this.onChangeValue} >
+                                            <div onChange={onChangeValue} >
                                                 <label className="radio">
                                                     <input type="radio" value="Today" name="post_date" />Today
                                                 </label>
@@ -63,8 +60,8 @@ export class Candidate_list extends Component {
                                     </aside>
                                     <aside className="widget job-widget">
                                         <h3 className="widget-title"><i className="flaticon flaticon-subfolder-1"></i>Categories</h3>                                        
-                                        <form id="list2" onSubmit={this.formSubmit} className="list-filter">
-                                            <div onChange={this.onChangeValue} >
+                                        <form id="list2" onSubmit={formSubmit} className="list-filter">
+                                            <div onChange={onChangeValue} >
                                                 <label className="radio">
                                                     <input type="radio" value="Digital Marketing" defaultChecked name="categories" />Digital Marketing
                                                 </label>
@@ -85,8 +82,8 @@ export class Candidate_list extends Component {
                                     </aside>
                                     <aside className="widget job-widget">
                                         <h3 className="widget-title"><i className="flaticon flaticon-expert"></i>Experince</h3>
-                                        <form id="list3" onSubmit={this.formSubmit} className="list-filter">
-                                            <div onChange={this.onChangeValue} >
+                                        <form id="list3" onSubmit={formSubmit} className="list-filter">
+                                            <div onChange={onChangeValue} >
                                                 <label className="radio">
                                                     <input type="radio" value="0Year to 1Year" name="ex_year" />0Year to 1Year
                                                 </label>
@@ -104,8 +101,8 @@ export class Candidate_list extends Component {
                                     </aside>
                                     <aside className="widget job-widget">
                                         <h3 className="widget-title"><i className="flaticon flaticon-gender"></i>Gender</h3>
-                                        <form id="list4" onSubmit={this.formSubmit} className="list-filter">
-                                            <div onChange={this.onChangeValue} >
+                                        <form id="list4" onSubmit={formSubmit} className="list-filter">
+                                            <div onChange={onChangeValue} >
                                                 <label className="radio">
                                                     <input type="radio" value="male" defaultChecked name="gender" />male
                                                 </label>
@@ -438,6 +435,6 @@ export class Candidate_list extends Component {
             </div>
           )
       }
-   }
+
 
 export default Candidate_list;

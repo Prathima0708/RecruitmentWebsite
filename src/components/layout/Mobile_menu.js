@@ -3,27 +3,22 @@ import { MDBNavbar, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBCollapse, MDBDropdo
   MDBHamburgerToggler } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 
-class Mobile_menu extends Component {
-  state = {
-    collapse1: false,
-    collapseID: ''
-  }
-  
-  toggleCollapse = collapseID => () => {
-    this.setState(prevState => ({ collapseID: (prevState.collapseID !== collapseID ? collapseID : '') }));
-  }
-  
-  toggleSingleCollapse = collapseId => {
-    this.setState({
-      ...this.state,
-      [collapseId]: !this.state[collapseId]
-    });
-  }
-  
+function Mobile_menu()  {
+  const [collapse1, setCollapse1] = useState(false);
+  const [collapseID, setCollapseID] = useState('');
 
-  render() {
+  const toggleCollapse = (collapseID) => {
+    setCollapseID((prevState) => prevState !== collapseID ? collapseID : '');
+  };
+
+  const toggleSingleCollapse = (collapseId) => {
+    setCollapse1((prevState) => ({ ...prevState, [collapseId]: !prevState[collapseId] }));
+  };
+
+
 
     return (
 
@@ -31,7 +26,7 @@ class Mobile_menu extends Component {
 
         <MDBNavbar>
           <MDBHamburgerToggler id="hamburger1" onClick={()=> this.toggleSingleCollapse('collapse1')} />
-            <MDBCollapse isOpen={this.state.collapse1} navbar>
+            <MDBCollapse isOpen={collapse1} navbar>
               <MDBNavbarNav left>
                 <MDBNavItem>
                     <MDBDropdown>
@@ -103,6 +98,6 @@ class Mobile_menu extends Component {
       </Router>
     );
   }
-}
+
 
 export default Mobile_menu;

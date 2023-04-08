@@ -3,24 +3,18 @@ import Header from '../components/layout/Header';
 import PageHeader from "../components/layout/PageHeader";
 import { Footer } from '../components/layout/Footer';
 import ProgressBar from 'react-animated-progress-bar';
+import { useState } from 'react';
 
 
-export class Candidate_details extends Component {
+function Candidate_details() {
 
-    constructor() {
-        super();
-        this.state = {
-          name: "React"
-        };
-        this.onChangeValue = this.onChangeValue.bind(this);
+    const [name, setName] = useState('React');
 
-    }
+  const onChangeValue = (event) => {
+    console.log(event.target.value);
+  };
+
     
-    onChangeValue(event) {
-        console.log(event.target.value);
-    }
-
-    render() {
         return (
 
             <div className="site-main">
@@ -279,6 +273,6 @@ export class Candidate_details extends Component {
             </div>
           )
       }
-   }
+
 
 export default Candidate_details;

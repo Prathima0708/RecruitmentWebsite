@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
+import { useState } from 'react';
 import {BrowserRouter as Router} from 'react-router-dom';
 
-export class Menu extends Component {
-    state = {
-            show: false,
-    }
-    render() {
+function Menu() {
+    const [show, setShow] = useState(false);
+    
         return (
             <Router>
                 <nav className="main-menu">         
@@ -68,6 +67,6 @@ export class Menu extends Component {
         )
         
     }
-}
+
 
 export default Menu;
