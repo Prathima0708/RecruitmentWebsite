@@ -1,8 +1,9 @@
 import React from 'react';
+import BgImage from "../../newimages/shaking-hands-3091906__340.jpg"
 
 const PageHeader = ({title,content,breadcrumb,className}) => {
     return (
-        <div className="page-header-area bg-img" style={{backgroundImage: 'url(https://via.placeholder.com/1920x193?text=pagetitle-bg-1920x193.png)' }}>
+        <div className="page-header-area bg-img" style={{backgroundImage: BgImage }}>
             <div className="page-header-area-inner">
                 <div className="container">
                     <div className="row">
