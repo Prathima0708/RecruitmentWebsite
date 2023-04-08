@@ -1,54 +1,53 @@
 import React, { Component } from "react";
+import { useState } from "react";
 import Slider from 'react-slick';
 
 
-export class Banner extends Component {
-    state = {
-        show: false,
-      }
-      render() {
-        var slick_slider = {
-          dots: false,
-          arrow: false,
-          autoplay: true,
-          infinite: true,
-          speed: 1000,
+function Banner() {
+    const [show, setShow] = useState(false);
+
+  const slick_slider = {
+    dots: false,
+    arrow: false,
+    autoplay: true,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    rows: 1,
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          rows: 1,
-  
-          responsive: [{
-  
-            breakpoint: 1199,
-            settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-            }
         },
-        {
-      
-            breakpoint: 1024,
-            settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-            }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
-        {
-      
-            breakpoint: 680,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
+      },
+      {
+        breakpoint: 680,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
-        {
-            breakpoint: 575,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }]
-        };
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
+        
                
         return (
                 
@@ -87,6 +86,6 @@ export class Banner extends Component {
             
         )
     }
-}
+
 
 export default Banner;

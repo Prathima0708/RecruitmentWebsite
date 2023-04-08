@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
-export class Footer extends Component {
-    render() {
+function Footer() {
+    
         return (
             <footer className="footer widget-footer bg-theme-DarkColor text-theme-WhiteColor clearfix">
                 <div className="second-footer">
@@ -109,6 +109,6 @@ export class Footer extends Component {
             </footer>
         )
     }
-}
 
+export default Footer;
 

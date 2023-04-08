@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Header from '../components/layout/Header';
 import PageHeader from "../components/layout/PageHeader";
-import { Footer } from '../components/layout/Footer';
+// import { Footer } from '../components/layout/Footer';
+import Footer from '../components/layout/Footer';
 import servicesdetail1 from '../images/services-detail1.jpg'
 import servicesdetail2 from '../images/services-02-1200x800.jpg'
 function Services_details() {

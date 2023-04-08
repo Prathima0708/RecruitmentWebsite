@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react';
 import Header from '../components/layout/Header';
 import PageHeader from "../components/layout/PageHeader";
-import { Footer } from '../components/layout/Footer';
+import Footer from '../components/layout/Footer';
 
 
 
@@ -11,6 +11,10 @@ const Employers_list = () => {
 
     const onChangeValue = (event) => {
       console.log(event.target.value);
+    }
+
+    function formSubmit(){
+        
     }
     return (
 
@@ -55,7 +59,7 @@ const Employers_list = () => {
                                 </aside>
                                 <aside className="widget job-widget">
                                     <h3 className="widget-title"><i className="flaticon flaticon-subfolder-1"></i>Categories</h3>                                        
-                                    <form id="list2" onSubmit={this.formSubmit} className="list-filter">
+                                    <form id="list2" onSubmit={formSubmit} className="list-filter">
                                         <div onChange={onChangeValue} >
                                             <label className="radio">
                                                 <input type="radio" value="Digital Marketing" defaultChecked name="categories" />Digital Marketing
@@ -77,7 +81,7 @@ const Employers_list = () => {
                                 </aside>
                                 <aside className="widget job-widget">
                                     <h3 className="widget-title"><i className="flaticon flaticon-expert"></i>Experince</h3>
-                                    <form id="list3" onSubmit={this.formSubmit} className="list-filter">
+                                    <form id="list3" onSubmit={formSubmit} className="list-filter">
                                         <div onChange={onChangeValue} >
                                             <label className="radio">
                                                 <input type="radio" value="0Year to 1Year" name="ex_year" />0Year to 1Year
@@ -96,7 +100,7 @@ const Employers_list = () => {
                                 </aside>
                                 <aside className="widget job-widget">
                                     <h3 className="widget-title"><i className="flaticon flaticon-gender"></i>Gender</h3>
-                                    <form id="list4" onSubmit={this.formSubmit} className="list-filter">
+                                    <form id="list4" onSubmit={formSubmit} className="list-filter">
                                         <div onChange={onChangeValue} >
                                             <label className="radio">
                                                 <input type="radio" value="male" defaultChecked name="gender" />male

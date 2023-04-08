@@ -1,60 +1,57 @@
 import React, { Component } from "react";
+import { useState } from "react";
 import Slider from 'react-slick';
 
 
-export class Banner extends Component {
-    state = {
-        show: false,
-      }
-      render() {
-        var slick_slider = {
-          dots: false,
-          arrow: false,
-          autoplay: true,
-          infinite: true,
-          speed: 1000,
+function Banner () {
+  const [show, setShow] = useState(false);
+
+  const slick_slider = {
+    dots: false,
+    arrow: false,
+    autoplay: true,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    rows: 1,
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          rows: 1,
-  
-          responsive: [{
-  
-            breakpoint: 1199,
-            settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-            }
         },
-        {
-      
-            breakpoint: 1024,
-            settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-            }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
-        {
-      
-            breakpoint: 680,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
+      },
+      {
+        breakpoint: 680,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
-        {
-            breakpoint: 575,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }]
-        };
-               
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+         
         return (
                 
             <Slider className="slick_slider banner_slider banner_slider_1" {...slick_slider} slidesToShow={1} autoplay={false} >
               <div className="slide">
-                <div className="slide_img" style={{ backgroundImage: 'url(https://via.placeholder.com/1920x751?text=slider-mainbg-001-1920x751.jpg)' }}></div>
+                <div className="slide_img" style={{ backgroundImage: 'url(	https://themetechmount.com/react/hireco/images/slides/slider-mainbg-001.jpg)' }}></div>
                 <div className="slide__content">
                   <div className="container">
                     <div className="row">
@@ -129,6 +126,6 @@ export class Banner extends Component {
             
         )
     }
-}
+
 
 export default Banner;
