@@ -3,45 +3,40 @@ import Slider from 'react-slick';
 import Header from '../components/layout/Header';
 import PageHeader from "../components/layout/PageHeader";
 import { Footer } from '../components/layout/Footer';
+import { useState } from 'react';
 
 
-export class Job_details extends Component {
+function Job_details() {
 
-    constructor(props) {
-        super(props);
-     
-        this.state = {
-          photoIndex: 0,
-          isOpen: false,
-        };
-    }
-    render() {
-        var slick_slider = {
-            dots: false,
-            arrow: false,
-            autoplay: true,
-            infinite: true,
-            speed: 1000,
-            slidesToShow: 4,
+    const [photoIndex, setPhotoIndex] = useState(0);
+    const [isOpen, setIsOpen] = useState(false);
+  
+    const slick_slider = {
+      dots: false,
+      arrow: false,
+      autoplay: true,
+      infinite: true,
+      speed: 1000,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      rows: 1,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          },
+        },
+        {
+          breakpoint: 575,
+          settings: {
+            slidesToShow: 1,
             slidesToScroll: 1,
-            rows: 1,
-
-            responsive: [{
-        
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 575,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }]
-        };
+          },
+        },
+      ],
+    }
 
         return (
 
@@ -372,6 +367,6 @@ export class Job_details extends Component {
             </div>
         )
     }
-}
+
 
 export default Job_details;

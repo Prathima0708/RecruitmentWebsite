@@ -7,6 +7,7 @@ import { Footer } from '../components/layout/Footer';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import CountUp from 'react-countup';
 import Video from '../components/layout/Video';
+import { useState } from 'react';
 
 
 const sliderElements = [
@@ -123,69 +124,57 @@ const sliderElements = [
 ];
 
 
-export class Home2 extends Component {
-    constructor(props) {
-        super(props);
-     
-        this.state = {
-          photoIndex: 0,
-          isOpen: false,
-          currentSlide: 0,
-        };
-    }
-
-
-    handleAfterChange = (index) => {
-        console.log("after change", index);
-        this.setState({
-        currentSlide: index
-        });
+function Home2() {
+    const [photoIndex, setPhotoIndex] = useState(0);
+    const [isOpen, setIsOpen] = useState(false);
+    const [currentSlide, setCurrentSlide] = useState(0);
+  
+    const handleAfterChange = (index) => {
+      console.log("after change", index);
+      setCurrentSlide(index);
+    };
+  
+    const settings = {
+      beforeChange: function (currentSlide, nextSlide) {
+        console.log("before change", currentSlide, nextSlide);
+      },
+      afterChange: handleAfterChange
+    };
+  
+    const slick_slider = {
+      dots: false,
+      arrow: false,
+      autoplay: true,
+      infinite: true,
+      speed: 1000,
+      slidesToScroll: 1,
+      slidesToShow: 4,
+      rows: 1,
+      responsive: [{
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }]
     };
 
-    render() {
-        const { photoIndex, isOpen } = this.state;
-        const settings = {
-            beforeChange: function (currentSlide, nextSlide) {
-              console.log("before change", currentSlide, nextSlide);
-            },
-            afterChange: this.handleAfterChange
-          };
-
-
-        var slick_slider = {
-            dots: false,
-            arrow: false,
-            autoplay: true,
-            infinite: true,
-            speed: 1000,
-            slidesToScroll: 1,
-            slidesToShow:4,
-            rows: 1,
-           
-            responsive: [{
-        
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 575,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }]
-        };
-        
+    
+       
         return (       
           <div className="site-main">
 
@@ -963,7 +952,5 @@ export class Home2 extends Component {
           </div>
         )
     }
-}
-
 
 export default Home2;

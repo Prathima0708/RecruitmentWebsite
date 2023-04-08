@@ -6,45 +6,41 @@ import { Footer } from '../components/layout/Footer';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import CountUp from 'react-countup';
 import ProgressBar from 'react-animated-progress-bar';
+import { useState } from 'react';
 
 
-export class Home extends Component {
-  constructor(props) {
-    super(props);
- 
-    this.state = {
-      photoIndex: 0,
-      isOpen: false,
-    };
-  }
-    render() {
-      var slick_slider = {
-        dots: false,
-        arrow: false,
-        autoplay: true,
-        infinite: true,
-        speed: 1000,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        rows: 1,
-
-        responsive: [{
-    
+function Home() {
+    const [photoIndex, setPhotoIndex] = useState(0);
+    const [isOpen, setIsOpen] = useState(false);
+  
+    const slick_slider = {
+      dots: false,
+      arrow: false,
+      autoplay: true,
+      infinite: true,
+      speed: 1000,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      rows: 1,
+      responsive: [
+        {
           breakpoint: 768,
           settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2
-          }
-      },
-      {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          },
+        },
+        {
           breakpoint: 575,
           settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-          }
-      }]
-      };
-        
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    };
+    
+      
         return (       
           <div className="site-main">
 
@@ -1040,7 +1036,7 @@ export class Home extends Component {
           </div>
         )
     }
-}
+
 
 
 export default Home;

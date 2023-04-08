@@ -6,51 +6,48 @@ import { Banner } from '../components/banner/Home3_banner';
 import { Footer } from '../components/layout/Footer';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import CountUp from 'react-countup';
+import { useState } from 'react';
 
 
-export class Home3 extends Component {
-  constructor(props) {
-    super(props);
- 
-    this.state = {
-      photoIndex: 0,
-      isOpen: false,
-    };
-  }
-    render() {
-      var slick_slider = {
-        dots: false,
-        arrow: false,
-        autoplay: true,
-        infinite: true,
-        speed: 1000,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        rows: 1,
-
-        responsive: [ {
-
-            breakpoint: 1199,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3
-            }
-        },{
-    
+function Home3(){
+    const [photoIndex, setPhotoIndex] = useState(0);
+    const [isOpen, setIsOpen] = useState(false);
+  
+    const slick_slider = {
+      dots: false,
+      arrow: false,
+      autoplay: true,
+      infinite: true,
+      speed: 1000,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      rows: 1,
+      responsive: [
+        {
+          breakpoint: 1199,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+          },
+        },
+        {
           breakpoint: 991,
           settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2
-          }
-      },
-      {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          },
+        },
+        {
           breakpoint: 575,
           settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-          }
-      }]
-      };
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    };
+    
+
         
         return (       
           <div className="site-main">
@@ -1380,7 +1377,7 @@ export class Home3 extends Component {
          </div>
        )
    }
-}
+
 
 
 export default Home3;

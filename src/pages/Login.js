@@ -4,10 +4,10 @@ import PageHeader from "../components/layout/PageHeader";
 import { Footer } from '../components/layout/Footer';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-export class Login extends Component {
+function Login() {
 
     
-    render() {
+    
         return (
 
             <div className="site-main">
@@ -144,6 +144,6 @@ export class Login extends Component {
             </div>
           )
       }
-   }
+
 
 export default Login;

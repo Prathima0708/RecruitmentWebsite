@@ -5,10 +5,8 @@ import { Footer } from '../components/layout/Footer';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 
-export class Register extends Component {
+function Register(){
 
-    
-    render() {
         return (
 
             <div className="site-main">
@@ -195,6 +193,5 @@ export class Register extends Component {
             </div>
           )
       }
-   }
 
 export default Register;

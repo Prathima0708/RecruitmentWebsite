@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import Header from '../components/layout/Header';
 import PageHeader from "../components/layout/PageHeader";
 import { Footer } from '../components/layout/Footer';
-
-export class Services_details extends Component {
-    render() {
-        return (
+import servicesdetail1 from '../images/services-detail1.jpg'
+import servicesdetail2 from '../images/services-02-1200x800.jpg'
+function Services_details() {
+           return (
 
             <div className="site-main">
                 <Header/>
@@ -26,7 +26,7 @@ export class Services_details extends Component {
                                 {/* ttm-service-single-content-area */}
                                 <div className="ttm-service-single-content-area">
                                     <div className="ttm_single_image-wrapper">
-                                        <img className="img-fluid" src="https://via.placeholder.com/1200x800?text=1200x800+services-01-1200x800.jpg" alt="services-img" />
+                                        <img className="img-fluid" src={servicesdetail1} alt="services-img" />
                                     </div>
                                     <div className="ttm-service-description mt-40">
                                         <h3 className="mb-20">Description For Our Service</h3>
@@ -129,7 +129,7 @@ export class Services_details extends Component {
                                             </div>
                                             <div className="col-md-6">
                                                 <div className="ttm_single_image-wrapper mb-30">
-                                                    <img className="img-fluid" src="https://via.placeholder.com/1200x800?text=1200x800+services-02-1200x800.jpg" alt="services-img" />
+                                                    <img className="img-fluid" src={servicesdetail2} alt="services-img" />
                                                 </div>
                                             </div>
                                             <div className="col-lg-12">
@@ -195,6 +195,6 @@ export class Services_details extends Component {
             </div>
           )
       }
-   }
+   
 
 export default Services_details;
