@@ -226,7 +226,7 @@ function Home2() {
                                 </ul>
                             </div>
                             <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-dark" 
-                            href={process.env.PUBLIC_URL + '/'}>view more</a>
+                            href= '/'>view more</a>
                         </div>
                         <div className="col-lg-6 col-md-9 col-sm-10 col-12 mx-auto">
                             <div className="mr-40 ml-20 pb-60 pt-lg-50">
@@ -413,7 +413,7 @@ function Home2() {
                                         ))}
                                     </Slider>
                                     <div className="slick_slider_countable">
-                                        <span className="currentSlide">{this.state.currentSlide + 1}</span>
+                                        <span className="currentSlide">{currentSlide + 1}</span>
                                         <span> / </span>
                                         <span className="totalSlide">{sliderElements.length}</span>
                                     </div>
@@ -452,7 +452,7 @@ function Home2() {
                                 </div>{/* featured-thumbnail end */}
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/'}>United States</a></h3>
+                                        <h3><a href= '/'>United States</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>A millions of decision about who has a right to settle.</p>
@@ -469,7 +469,7 @@ function Home2() {
                                 </div>{/* featured-thumbnail end */}
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/'}>Australia</a></h3>
+                                        <h3><a href= '/'>Australia</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>Our head quarters is in Canberra, help throughout process</p>
@@ -486,7 +486,7 @@ function Home2() {
                                 </div>{/* featured-thumbnail end */}
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/'}>Canada</a></h3>
+                                        <h3><a href= '/'>Canada</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>We will help in every step of the application process.</p>
@@ -503,7 +503,7 @@ function Home2() {
                                 </div>{/* featured-thumbnail end */}
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/'}>United Kingdom</a></h3>
+                                        <h3><a href='/'>United Kingdom</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>We will help you with every step process of recruitment.</p>
@@ -520,7 +520,7 @@ function Home2() {
                                 </div>{/* featured-thumbnail end */}
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/'}>United States</a></h3>
+                                        <h3><a href= '/'>United States</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>A millions of decision about who has a right to settle.</p>
@@ -537,7 +537,7 @@ function Home2() {
                                 </div>{/* featured-thumbnail end */}
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/'}>Canada</a></h3>
+                                        <h3><a href= '/'>Canada</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>We will help in every step of the application process.</p>
@@ -565,7 +565,7 @@ function Home2() {
                                 </div>
                             </div>{/* section-title end */}
                             <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-dark" 
-                             href={process.env.PUBLIC_URL + '/'}>Explore More Companies</a>
+                             href= '/'>Explore More Companies</a>
                         </div>
                         <div className="col-lg-8">
                             <div className="row g-0 ttm-vertical_sep mt-lg-50">
@@ -722,7 +722,7 @@ function Home2() {
                         </div>
                         <div className="col-lg-6 col-md-4">
                             <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-dark mb-15"
-                             href={process.env.PUBLIC_URL + '/'}>Get Started</a>
+                             href= '/'>Get Started</a>
                         </div>
                         <div className="col-lg-6">
                             <div className="featuredbox-number pr-30 pr-lg-0 pb-lg-50 pt-md-20">
@@ -842,7 +842,7 @@ function Home2() {
                                 </div>{/* featured-thumbnail end */}
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/blog_details'}>Are meetings falling flat? Try these 10 tips</a></h3>
+                                        <h3><a href= '/blog_details'>Are meetings falling flat? Try these 10 tips</a></h3>
                                     </div>
                                     <div className="post-meta">
                                         <span className="ttm-meta-line byline">Admin</span>
@@ -852,7 +852,7 @@ function Home2() {
                                         <p>Whatever you do in planning, facilitating. Goal should revolve support.</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" 
-                                    href={process.env.PUBLIC_URL + '/blog_details'}>read more!</a>
+                                    href='/blog_details'>read more!</a>
                                 </div>
                             </div>{/* featured-imagebox-post end */}
                         </div>
@@ -870,7 +870,7 @@ function Home2() {
                                 </div>{/* featured-thumbnail end */}
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/blog_details'}>Are You Moving Businesses To Another State?</a></h3>
+                                        <h3><a href='/blog_details'>Are You Moving Businesses To Another State?</a></h3>
                                     </div>
                                     <div className="post-meta">
                                         <span className="ttm-meta-line byline">Admin</span>
@@ -880,7 +880,7 @@ function Home2() {
                                         <p>A business leader must consider issues beyond choosing a moving!</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" 
-                                    href={process.env.PUBLIC_URL + '/blog_details'}>read more!</a>
+                                    href='/blog_details'>read more!</a>
                                 </div>
                             </div>{/* featured-imagebox-post end */}
                         </div>
@@ -898,7 +898,7 @@ function Home2() {
                                 </div>{/* featured-thumbnail end */}
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/blog_details'}>Shame: Does It Fit In The Workplace?</a></h3>
+                                        <h3><a href= '/blog_details'>Shame: Does It Fit In The Workplace?</a></h3>
                                     </div>
                                     <div className="post-meta">
                                         <span className="ttm-meta-line byline">Admin</span>
@@ -908,7 +908,7 @@ function Home2() {
                                         <p>This can be innate or external, and the results can be surprising...</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" 
-                                    href={process.env.PUBLIC_URL + '/blog_details'}>read more!</a>
+                                    href= '/blog_details'>read more!</a>
                                 </div>
                             </div>{/* featured-imagebox-post end */}
                         </div>
@@ -926,7 +926,7 @@ function Home2() {
                                 </div>{/* featured-thumbnail end */}
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/blog_details'}>How to Handle Negativity in Former People?</a></h3>
+                                        <h3><a href='/blog_details'>How to Handle Negativity in Former People?</a></h3>
                                     </div>
                                     <div className="post-meta">
                                         <span className="ttm-meta-line byline">Admin</span>
@@ -936,7 +936,7 @@ function Home2() {
                                         <p>Whatever you do in planning, facilitating. Goal should revolve support.</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" 
-                                    href={process.env.PUBLIC_URL + '/blog_details'}>read more!</a>
+                                    href='/blog_details'>read more!</a>
                                 </div>
                             </div>{/* featured-imagebox-post end */}
                         </div>
