@@ -24,7 +24,7 @@ const Header = () => {
                 
         <header id="masthead" className="header ttm-header-style-01">
             {/* topbar */}
-           <div className="top_bar bg-theme-DarkColor text-center clearfix">
+           {/* <div className="top_bar bg-theme-DarkColor text-center clearfix">
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-12">
@@ -38,7 +38,7 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* topbar end */}
             {/* site-header-menu */}
             <div id="site-header-menu" className="site-header-menu ttm-bgcolor-white">
