@@ -9,7 +9,6 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import CountUp from "react-countup";
 import ProgressBar from "react-animated-progress-bar";
 import { useState } from "react";
-import BGImage from "../newimages/slider-mainbg-001.jpg";
 
 function Home() {
   const [photoIndex, setPhotoIndex] = useState(0);
@@ -59,6 +58,10 @@ function Home() {
               {/* section title */}
               <div className="section-title title-style-center_text">
                 <div className="title-header">
+                  <h3>
+                    Get{" "}
+                    <span className="text-theme-SkinColor">Appropriate</span>
+                  </h3>
                   <h2 className="title">Search Job By Industry</h2>
                 </div>
               </div>
