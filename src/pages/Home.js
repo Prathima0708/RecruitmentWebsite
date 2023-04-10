@@ -9,6 +9,11 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import CountUp from "react-countup";
 import ProgressBar from "react-animated-progress-bar";
 import { useState } from "react";
+import Services01 from "../newimages/services-01.jpg";
+import Services03 from "../newimages/services-03.jpg";
+import Services02 from "../newimages/services-02.jpg";
+import Services04 from "../newimages/services-04.jpg";
+import jobseeker01 from "../newimages/col-bgimage-2.jpg";
 
 function Home() {
   const [photoIndex, setPhotoIndex] = useState(0);
@@ -58,10 +63,6 @@ function Home() {
               {/* section title */}
               <div className="section-title title-style-center_text">
                 <div className="title-header">
-                  <h3>
-                    Get{" "}
-                    <span className="text-theme-SkinColor">Appropriate</span>
-                  </h3>
                   <h2 className="title">Search Job By Industry</h2>
                 </div>
               </div>
@@ -417,10 +418,6 @@ function Home() {
               {/* section title */}
               <div className="section-title style2 mb-0">
                 <div className="title-header">
-                  <h3>
-                    Classic{" "}
-                    <span className="text-theme-SkinColor">Service</span>
-                  </h3>
                   <h2 className="title">We Understand Needs</h2>
                 </div>
                 <div className="title-desc">
@@ -460,11 +457,7 @@ function Home() {
               <div className="featured-imagebox featured-imagebox-services style1">
                 {/* featured-thumbnail */}
                 <div className="featured-thumbnail">
-                  <img
-                    src={
-                      "https://via.placeholder.com/600x600?text=600x600+services-01.jpg"
-                    }
-                  />
+                  <img src={Services01} alt="services01" />
                 </div>
                 {/* featured-thumbnail end */}
                 <div className="featured-content">
@@ -494,11 +487,7 @@ function Home() {
               <div className="featured-imagebox featured-imagebox-services style1">
                 {/* featured-thumbnail */}
                 <div className="featured-thumbnail">
-                  <img
-                    className="img-fluid"
-                    src="https://via.placeholder.com/600x600?text=600x600+services-02.jpg"
-                    alt="image"
-                  />
+                  <img className="img-fluid" src={Services02} alt="image2" />
                 </div>
                 {/* featured-thumbnail end */}
                 <div className="featured-content">
@@ -528,11 +517,7 @@ function Home() {
               <div className="featured-imagebox featured-imagebox-services style1">
                 {/* featured-thumbnail */}
                 <div className="featured-thumbnail">
-                  <img
-                    className="img-fluid"
-                    src="https://via.placeholder.com/600x600?text=600x600+services-03.jpg"
-                    alt="image"
-                  />
+                  <img className="img-fluid" src={Services03} alt="image3" />
                 </div>
                 {/* featured-thumbnail end */}
                 <div className="featured-content">
@@ -562,11 +547,7 @@ function Home() {
               <div className="featured-imagebox featured-imagebox-services style1">
                 {/* featured-thumbnail */}
                 <div className="featured-thumbnail">
-                  <img
-                    className="img-fluid"
-                    src="https://via.placeholder.com/600x600?text=600x600+services-04.jpg"
-                    alt="image"
-                  />
+                  <img className="img-fluid" src={Services04} alt="image4" />
                 </div>
                 {/* featured-thumbnail end */}
                 <div className="featured-content">
@@ -730,12 +711,12 @@ function Home() {
                   className="ttm-col-wrapper-bg-layer ttm-bg-layer"
                   style={{
                     backgroundImage:
-                      "url(https://via.placeholder.com/570x520?text=570x520+col-bgimage-1.jpg)",
+                      "url(https://themetechmount.com/react/hireco/images/bg-image/col-bgimage-1.jpg)",
                   }}
                 ></div>
                 <div className="layer-content"></div>
                 <img
-                  src="https://via.placeholder.com/570x520?text=570x520+col-bgimage-1.jpg"
+                  src="	https://themetechmount.com/react/hireco/images/bg-image/col-bgimage-2.jpg"
                   className="img-fluid col-bg-img-res"
                   alt="bgimage"
                 />
@@ -751,7 +732,7 @@ function Home() {
                   className="ttm-col-wrapper-bg-layer ttm-bg-layer"
                   style={{
                     backgroundImage:
-                      "url(https://via.placeholder.com/570x520?text=570x520+col-bgimage-2.jpg)",
+                      "url(	https://themetechmount.com/react/hireco/images/bg-image/col-bgimage-2.jpg)",
                   }}
                 ></div>
                 <div className="layer-content"></div>
@@ -820,9 +801,10 @@ function Home() {
                   className="ttm-col-wrapper-bg-layer ttm-bg-layer"
                   style={{
                     backgroundImage:
-                      "url(https://via.placeholder.com/1092x708?text=1092x708+col-bgimage-3.jpg)",
+                      "url(https://themetechmount.com/react/hireco/images/bg-image/col-bgimage-1.jpg)",
                   }}
                 ></div>
+
                 <div className="layer-content"></div>
                 <img
                   className="img-fluid col-bg-img-res"

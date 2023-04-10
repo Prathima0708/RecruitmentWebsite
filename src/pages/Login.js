@@ -1,10 +1,61 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import Header from "../components/layout/Header";
 import PageHeader from "../components/layout/PageHeader";
 import Footer from "../components/layout/Footer";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import axios from "axios";
 
 function Login() {
+  const [firstName, setFirstName] = useState("");
+  const [password, setPassword] = useState("");
+  function handlePasswordChange(event) {
+    setPassword(event.target.value);
+  }
+  function firstNameChangeHandler(event) {
+    setFirstName(event.target.value);
+  }
+  async function handleSubmit(event) {
+    event.preventDefault();
+
+    async function storeData() {
+      const formData = {
+        email: firstName,
+        password: password,
+      };
+      console.log(formData);
+      try {
+        let headers = {
+          "Content-Type": "application/json; charset=utf-8",
+        };
+        const res = await axios.post(
+          "http://127.0.0.1:8000/recruitement/user_login/",
+          formData,
+          { headers: headers }
+        );
+        console.log(res.data);
+
+        if (res.status === 200) {
+          console.log("success");
+        } else if (res.status === 404) {
+          console.log("user does not exist");
+        } else if (res.status === 401) {
+          console.log("invalid");
+        } else {
+          console.log("error");
+        }
+      } catch (e) {
+        console.log(e);
+      }
+    }
+    storeData();
+    //history.push("/home");
+
+    setFirstName("");
+
+    setPassword("");
+
+    //setPhone("");
+  }
   return (
     <div className="site-main">
       <Header />
@@ -26,7 +77,7 @@ function Login() {
                   </div>
                   <div className="ttm-tabs ttm-tab-style-02">
                     <Tabs>
-                      <TabList className="tabs">
+                      {/* <TabList className="tabs">
                         <Tab className="tab">
                           <a>
                             <i className="flaticon flaticon-research"></i>
@@ -34,18 +85,19 @@ function Login() {
                             <h5>Login as a Candidate</h5>
                           </a>
                         </Tab>
-                        {/* <Tab className="tab">
+                        <Tab className="tab">
                                                         <a>
                                                             <i className="flaticon flaticon-job-search"></i>
                                                             <span>Employer</span><h5>Login as a Employer</h5>
                                                         </a>
-                                                    </Tab> */}
-                      </TabList>
+                                                    </Tab>
+                      </TabList> */}
                       <div className="content-tab">
                         <TabPanel>
                           <form
                             id="login_form"
                             className="login_form wrap-form"
+                            onSubmit={handleSubmit}
                           >
                             <div className="row">
                               <div className="col-lg-12">
@@ -55,6 +107,8 @@ function Login() {
                                     type="email"
                                     id="txtemail"
                                     placeholder="Email Address"
+                                    value={firstName}
+                                    onChange={firstNameChangeHandler}
                                   />
                                 </label>
                               </div>
@@ -65,6 +119,8 @@ function Login() {
                                     type="password"
                                     id="password"
                                     placeholder="Password"
+                                    value={password}
+                                    onChange={handlePasswordChange}
                                   />
                                 </label>
                               </div>

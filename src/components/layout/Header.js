@@ -3,6 +3,7 @@ import Menu from "./Menu";
 import Mobile_menu from "./Mobile_menu";
 import Logo from "./Logo";
 import Header_search from "./Header_search";
+import Headersearch from "./Header_search";
 
 const Header = () => {
   const isSticky = (e) => {
@@ -59,42 +60,35 @@ const Header = () => {
                         <Mobile_menu />
                       </div>
                       {/* menu end */}
-                      <div className="header_extra ml-auto d-flex align-items-center">
-                        <Header_search />
-                        <div className="header_social">
-                          <ul className="social-icons">
-                            <li>
-                              <a href="/" rel="noopener" aria-label="facebook">
-                                <i className="ti ti-facebook"></i>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="/" rel="noopener" aria-label="twitter">
-                                <i className="ti ti-twitter-alt"></i>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="/" rel="noopener" aria-label="google">
-                                <i className="ti ti-google"></i>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="/" rel="noopener" aria-label="linkedin">
-                                <i className="ti ti-linkedin"></i>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
+
+                      <div className="header_btn">
+                        <a
+                          className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill
+                                        ttm-icon-btn-left ttm-btn-color-skincolor d-flex align-items-center"
+                        >
+                          <i className="far fa-user fa-sm"></i>
+                          <a className="alert-heading" href="/register">
+                            sign up{" "}
+                          </a>
+                          <span className="ml-10 mr-10">/</span>
+                          <i className="ti ti-lock fa-sm"></i>
+                          <a className="alert-heading" href="/login">
+                            login{" "}
+                          </a>
+                        </a>
                       </div>
                     </div>
                   </div>
-                  <div className="header_btn">
+                  {/* <div className="header_btn">
                     <a
                       className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor"
                       href="/login"
                     >
                       Login
                     </a>
+                  </div> */}
+                  <div className="header_extra ml-auto d-flex align-items-center">
+                    <Headersearch />
                   </div>
                 </div>
                 {/* site-navigation end */}
