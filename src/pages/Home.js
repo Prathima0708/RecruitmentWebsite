@@ -9,7 +9,15 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import CountUp from 'react-countup';
 import ProgressBar from 'react-animated-progress-bar';
 import { useState } from 'react';
-
+import Services from "../newimages/services-01.jpg"
+import Services01 from "../newimages/services-02.jpg"
+import Services02 from "../newimages/services-03.jpg"
+import Services04 from "../newimages/services-04.jpg"
+import JobSeeker1 from "../newimages/JobSeeker1.jpg"
+import Business1 from "../newimages/Business1.jpg"
+import OurMision1 from "../newimages/OurMision1.jpg"
+import OurVision1 from "../newimages/OurVision1.jpg"
+import CoreValues from "../newimages/CoreValues1.jpg"
 
 function Home() {
     const [photoIndex, setPhotoIndex] = useState(0);
@@ -317,7 +325,7 @@ function Home() {
                             <div className="featured-imagebox featured-imagebox-services style1">
                                 {/* featured-thumbnail */}
                                 <div className="featured-thumbnail">
-                                    <img src={"https://via.placeholder.com/600x600?text=600x600+services-01.jpg"} />
+                                    <img src={Services} />
                                 </div>{/* featured-thumbnail end */}
                                 <div className="featured-content">
                                     <div className="featured-title">
@@ -336,7 +344,7 @@ function Home() {
                             <div className="featured-imagebox featured-imagebox-services style1">
                                 {/* featured-thumbnail */}
                                 <div className="featured-thumbnail">
-                                    <img className="img-fluid" src="https://via.placeholder.com/600x600?text=600x600+services-02.jpg" alt="image" />
+                                    <img className="img-fluid" src={Services02} alt="image" />
                                 </div>{/* featured-thumbnail end */}
                                 <div className="featured-content">
                                     <div className="featured-title">
@@ -355,7 +363,7 @@ function Home() {
                             <div className="featured-imagebox featured-imagebox-services style1">
                                 {/* featured-thumbnail */}
                                 <div className="featured-thumbnail">
-                                    <img className="img-fluid" src="https://via.placeholder.com/600x600?text=600x600+services-03.jpg" alt="image" />
+                                    <img className="img-fluid" src={Services01} alt="image" />
                                 </div>{/* featured-thumbnail end */}
                                 <div className="featured-content">
                                     <div className="featured-title">
@@ -374,7 +382,7 @@ function Home() {
                             <div className="featured-imagebox featured-imagebox-services style1">
                                 {/* featured-thumbnail */}
                                 <div className="featured-thumbnail">
-                                    <img className="img-fluid" src="https://via.placeholder.com/600x600?text=600x600+services-04.jpg" alt="image" />
+                                    <img className="img-fluid" src={Services04} alt="image" />
                                 </div>{/* featured-thumbnail end */}
                                 <div className="featured-content">
                                     <div className="featured-title">
@@ -465,7 +473,7 @@ function Home() {
                             <div className="col-bg-img-one ttm-col-bgimage-yes ttm-bg"  >
                                 <div className="ttm-col-wrapper-bg-layer ttm-bg-layer"  style={{ backgroundImage: 'url(https://via.placeholder.com/570x520?text=570x520+col-bgimage-1.jpg)' }}></div>
                                 <div className="layer-content"></div>
-                                <img src="https://via.placeholder.com/570x520?text=570x520+col-bgimage-1.jpg" className="img-fluid col-bg-img-res" alt="bgimage" />
+                                <img src={JobSeeker1} className="img-fluid col-bg-img-res" alt="bgimage" />
                             </div>{/* col-img-bg-img-one end */}
                         </div>
                     </div>
@@ -524,7 +532,7 @@ function Home() {
                                 <div className="ttm-col-wrapper-bg-layer ttm-bg-layer"  style={{ backgroundImage: 'url(https://via.placeholder.com/1092x708?text=1092x708+col-bgimage-3.jpg)' }}></div>
                                 <div className="layer-content">
                                 </div>
-                                <img className="img-fluid col-bg-img-res" src="https://via.placeholder.com/1092x708?text=1092x708+col-bgimage-3.jpg" alt="bgimage" />
+                                <img className="img-fluid col-bg-img-res" src={Business1} alt="bgimage" />
                             </div>{/* col-img-bg-img-one end */}
                         </div>
                         <div className="col-lg-5">
@@ -552,7 +560,7 @@ function Home() {
                                                 <div className="row">
                                                     <div className="col-lg-4 col-md-3 col-sm-4">
                                                         <img className="img-fluid alignleft" 
-                                                        height="200" width="200" src="https://via.placeholder.com/200x200?text=tab-img01-200x200.jpg" alt="image" />
+                                                        height="200" width="200" src={OurMision1} alt="image" />
                                                     </div>
                                                     <div className="col-lg-8 col-md-9 col-sm-8">
                                                         <div className="pt-15">
@@ -569,8 +577,7 @@ function Home() {
                                                 <TabPanel>
                                                 <div className="row">
                                                     <div className="col-lg-4 col-md-3 col-sm-4">
-                                                        <img className="img-fluid alignleft" height="200" width="200" src="https://via.placeholder.com/200x200?text=tab-img02-200x200.jpg
-" alt="image" />
+                                                        <img className="img-fluid alignleft" height="200" width="200" src={OurVision1}alt="image" />
                                                     </div>
                                                     <div className="col-lg-8 col-md-9 col-sm-8">
                                                         <div className="pt-15">
@@ -587,8 +594,7 @@ function Home() {
                                                 <TabPanel>
                                                 <div className="row">
                                                     <div className="col-lg-4 col-md-3 col-sm-4">
-                                                        <img className="img-fluid alignleft" height="200" width="200" src="https://via.placeholder.com/200x200?text=tab-img03-200x200.jpg
-" alt="image" />
+                                                        <img className="img-fluid alignleft" height="200" width="200" src={CoreValues}alt="image" />
                                                     </div>
                                                     <div className="col-lg-8 col-md-9 col-sm-8">
                                                         <div className="pt-15">
