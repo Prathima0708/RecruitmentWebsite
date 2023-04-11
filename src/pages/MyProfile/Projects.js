@@ -22,9 +22,10 @@ const Projects = () => {
         user_account_id: 1,
         tag_this_project_with_your_Education: tag,
         client_name: client,
-        project_staus: status,
+        project_staus: true,
         worked_from_year: workFrom,
         project_details: details,
+        project_title: title,
       };
       console.log("formdata before post req", formData);
       try {
