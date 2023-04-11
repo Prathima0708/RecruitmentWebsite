@@ -1,6 +1,8 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FormGroup, Input, Label, Modal, ModalBody } from "reactstrap";
+import { subURL } from "../../utils/URL's";
 
 const Projects = () => {
   const [projectModal, setProjectModal] = useState(false);
@@ -12,6 +14,43 @@ const Projects = () => {
   const [status, setStatus] = useState("");
   const [workFrom, setWorkFrom] = useState("");
   const [details, setDetails] = useState("");
+  async function handleSubmit(event) {
+    event.preventDefault();
+
+    async function storeData() {
+      const formData = {
+        user_account_id: 1,
+        tag_this_project_with_your_Education: tag,
+        client_name: client,
+        project_staus: status,
+        worked_from_year: workFrom,
+        project_details: details,
+      };
+      console.log("formdata before post req", formData);
+      try {
+        let headers = {
+          "Content-Type": "multipart/form-data",
+        };
+        const res = await axios.post(`${subURL}/userprojects`, formData, {
+          headers: headers,
+        });
+        console.log(res.data);
+
+        if (res.status === 201) {
+          console.log("success");
+          // setSuccessMessage("Data saved successfully!");
+          // setShowModal(true);
+        } else {
+          console.log("error");
+        }
+      } catch (e) {
+        console.log(e);
+      }
+    }
+
+    storeData();
+  }
+
   return (
     <div
       className="overview-box"
@@ -49,7 +88,7 @@ const Projects = () => {
             <ModalBody className="modal-body">
               <div className="text-center mb-4">
                 <h5 className="modal-title" id="staticBackdropLabel">
-                  Add Education
+                  Add Project
                 </h5>
               </div>
               <div className="position-absolute end-0 top-0 p-3">
@@ -152,6 +191,7 @@ const Projects = () => {
                 <button
                   className="submit ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor w-100"
                   type="submit"
+                  onClick={handleSubmit}
                 >
                   Submit
                 </button>

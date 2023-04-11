@@ -68,6 +68,7 @@ function Register() {
       formData.append("profile_photo", profilePhoto);
       formData.append("phone_number", enteredPhone);
       formData.append("email_address", email);
+      formData.append("password", password);
       console.log("formdata before post req", formData);
       try {
         let headers = {

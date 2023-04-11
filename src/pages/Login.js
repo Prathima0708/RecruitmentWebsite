@@ -19,7 +19,7 @@ function Login() {
 
     async function storeData() {
       const formData = {
-        email: firstName,
+        email_address: firstName,
         password: password,
       };
       console.log(formData);

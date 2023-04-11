@@ -13,6 +13,7 @@ import Employment from "./MyProfile/Employment";
 import Accomplishments from "./MyProfile/Accomplishments";
 import Aboutme from "./MyProfile/Aboutme";
 import Skills from "./MyProfile/Skills";
+import PersonalProfile from "./MyProfile/PersonalProfile";
 
 function Candidate_details() {
   const [name, setName] = useState("React");
@@ -212,6 +213,7 @@ function Candidate_details() {
                   <Employment />
                   <Accomplishments />
                   <Skills />
+                  <PersonalProfile />
                 </div>
               </div>
               {/* row end */}

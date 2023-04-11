@@ -1,6 +1,23 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FormGroup, Input, Label, Modal, ModalBody } from "reactstrap";
+import {
+  Button,
+  FormGroup,
+  Input,
+  Label,
+  Modal,
+  ModalBody,
+  ModalFooter,
+  ModalHeader,
+} from "reactstrap";
+import { subURL } from "../../utils/URL's";
+const currentYear = new Date().getFullYear();
+const yearOptions = [];
+
+for (let year = 1950; year <= currentYear; year++) {
+  yearOptions.push(year.toString());
+}
 
 const Educationdetails = () => {
   const [educationModal, setEducationModal] = useState(false);
@@ -11,9 +28,65 @@ const Educationdetails = () => {
   const [course, setCourse] = useState("");
   const [specialization, setSpecialization] = useState("");
   const [courseType, setCourseType] = useState("");
-  const [courseDuration, setCourseDuration] = useState("");
+
   const [gradingSystem, setGradingSystem] = useState("");
   const [marks, setMarks] = useState("");
+
+  const [startYear, setStartYear] = useState("");
+  const [endYear, setEndYear] = useState("");
+
+  const [showModal, setShowModal] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+
+    async function storeData() {
+      const formData = {
+        user_account_id: 1,
+        education: education,
+        univesity: university,
+        course: course,
+        speclalization: specialization,
+        course_type: courseType,
+        course_duration: startYear,
+        completion_date: endYear,
+        grading_system: gradingSystem,
+        marks: marks,
+      };
+      try {
+        let headers = {
+          "Content-Type": "multipart/form-data",
+        };
+        const res = await axios.post(`${subURL}/usereducation/`, formData, {
+          headers: headers,
+        });
+        console.log(res.data);
+
+        if (res.status === 201) {
+          console.log("success");
+          setSuccessMessage("Data saved successfully!");
+          setShowModal(true);
+        } else {
+          console.log("error");
+        }
+      } catch (e) {
+        console.log(e);
+      }
+    }
+
+    storeData();
+
+    setEducation("");
+    setUniversity("");
+    setCourse("");
+    setSpecialization("");
+    setCourseType("");
+    setStartYear("");
+    setEndYear("");
+    setGradingSystem("");
+    setMarks("");
+  }
   return (
     <div
       className="overview-box"
@@ -168,14 +241,43 @@ const Educationdetails = () => {
               </div>
 
               <div className="p-3">
-                <Label for="courseDuration">Course Duration</Label>
+                <Label for="startYear">Starting Year</Label>
                 <Input
-                  type="text"
-                  name="courseDuration"
-                  id="courseDuration"
-                  value={courseDuration}
-                  onChange={(e) => setCourseDuration(e.target.value)}
-                />
+                  type="select"
+                  name="startYear"
+                  id="startYear"
+                  value={startYear}
+                  onChange={(e) => setStartYear(e.target.value)}
+                >
+                  <option value="" disabled selected hidden>
+                    Starting Year
+                  </option>
+                  {yearOptions.map((year) => (
+                    <option key={year} value={year}>
+                      {year}
+                    </option>
+                  ))}
+                </Input>
+              </div>
+
+              <div className="p-3">
+                <Label for="endYear">Ending Year</Label>
+                <Input
+                  type="select"
+                  name="endYear"
+                  id="endYear"
+                  value={endYear}
+                  onChange={(e) => setEndYear(e.target.value)}
+                >
+                  <option value="" disabled selected hidden>
+                    Ending Year
+                  </option>
+                  {yearOptions.map((year) => (
+                    <option key={year} value={year}>
+                      {year}
+                    </option>
+                  ))}
+                </Input>
               </div>
 
               <div className="p-3">
@@ -203,6 +305,7 @@ const Educationdetails = () => {
                 <button
                   className="submit ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor w-100"
                   type="submit"
+                  onClick={handleSubmit}
                 >
                   Submit
                 </button>
@@ -211,6 +314,15 @@ const Educationdetails = () => {
           </Modal>
         </div>
       </div>
+      <Modal isOpen={showModal} toggle={() => setShowModal(false)}>
+        <ModalHeader toggle={() => setShowModal(false)}>Success</ModalHeader>
+        <ModalBody>{successMessage}</ModalBody>
+        <ModalFooter>
+          <Button color="primary" onClick={() => setShowModal(false)}>
+            OK
+          </Button>
+        </ModalFooter>
+      </Modal>
     </div>
   );
 };
